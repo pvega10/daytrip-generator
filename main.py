@@ -1,6 +1,7 @@
 import random
 
 
+
 place_to_travel = ["San Antonio", "Las Vegas", "Orlando"]
 mode_to_travel = ["Rental Car", "Train", "Airline"]
 place_to_eat_LAS = ["Luxor", "MGM", "Bellagio"]
@@ -12,31 +13,36 @@ thing_to_do_ORL = ["Disney", "Universal", "Hard Rock"]
 
 def trip_destination (place_to_travel):
     rand_destination = random.choice (place_to_travel) 
-    print (f'Would you like to go to {rand_destination}?')
-    user_destination_choice = input("y or n? ")
-    if user_destination_choice != "y":
+    print (f'Would you like to go to {rand_destination}? y or n? ')
+    user_destination = input()
+    if user_destination != "y":
         trip_destination (place_to_travel)
-    elif user_destination_choice == "y": 
+    elif user_destination == "y": 
         print ("Awesome, lets go!")
         
       
         
-
-def travel_mode (mode_to_travel):
-    rand_travel_mode = random.choice (mode_to_travel)
-    print (f'Would you like to go by {mode_to_travel}?')
-    travel_mode_choice = input("y or n? ")
-    if travel_mode_choice != "y":
-        travel_mode (place_to_travel)
-    elif travel_mode_choice == "y": 
-        print ("Awesome, lets ride!")
-    print (rand_travel_mode)
+# def travel_mode (mode_to_travel):
+#     rand_travel_mode = random.choice (mode_to_travel)
+#     print (f'Would you like to go by {rand_travel_mode}?')
+#     travel_mode_choice = input("y or n? ")
+#     if travel_mode_choice != "y":
+#         travel_mode (mode_to_travel)
+#     elif travel_mode_choice == "y": 
+#         print ("Great! Sounds fun!")
+    
 
 # # need to apply random selction based on destination
 
-# def dinner_plans (place_to_eat_LAS):
-#     rand_eatery = random.choice (place_to_eat_LAS)
-#     print (rand_eatery)
+# def dinner_plans_vegas (place_to_eat_LAS):
+#     if travel_mode == "Las Vegas":
+#         rand_eatery = random.choice (place_to_eat_LAS)
+#         print (f'Would you like to eat at {rand_eatery}')
+        # LAS_eatery_choice = input ("y or n? ")
+        #     if LAS_eatery_choice != "y":
+        #         dinner_plans (place_to_eat_LAS)
+            
+    
 
 # # need to apply random selection based on destination   
 
@@ -45,6 +51,6 @@ def travel_mode (mode_to_travel):
 #     print (rand_entertainment)
 
 trip_destination(place_to_travel)
-travel_mode (mode_to_travel)
+# travel_mode (mode_to_travel)
 # dinner_plans (place_to_eat_LAS)
 # entertainment_plans (thing_to_do_LAS)
